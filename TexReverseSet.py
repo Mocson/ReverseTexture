@@ -9,8 +9,8 @@ def secmat():
     objs = pm.ls(sl=True)
     SG = pm.listConnections(objs, s=False, d=True, t='shadingEngine')
     mat = pm.ls(pm.listConnections(SG, s=True, d=False), mat=True)
-    test = ''.join(mat[0])
-    cmds.textField('tFld', edit=True, text=test)
+    StrMat = ''.join(mat[0])
+    cmds.textField('tFld', edit=True, text=StrMat)
 
 # Deffuse----------------
 def createRev():
